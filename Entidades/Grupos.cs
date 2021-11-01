@@ -10,7 +10,7 @@ namespace GestionPersonas.Entidades
 {
     public class Grupos
     {
-        //GrupoId,Fecha,Descripcion,CantidadPersonas
+       
         [Key]
         public int GrupoId { get; set; }
         public DateTime Fecha { get; set; } = DateTime.Now;

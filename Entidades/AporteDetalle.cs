@@ -9,16 +9,16 @@ using System.Threading.Tasks;
 
 namespace GestionPersonas.Entidades
 {
-    public class Aportes
+    public class AporteDetalle
     {
         [Key]
+        public int IdDetalle { get; set; }
         public int AporteId { get; set; }
-        public DateTime Fecha { get; set; } = DateTime.Now;
-        public int PersonaId { get; set; }
-        public string Concepto { get; set; }
+        public int TipoAporteId { get; set; }
         public float Monto { get; set; }
+        public Personas Persona { get; set; }
 
-        [ForeignKey("AporteId")]
-        public List<AporteDetalle> AporteDetalle { get; set; } = new List<AporteDetalle>();
+        [ForeignKey("TipoAporteId")]
+        public TipoAporte TipoAporte { get; set; }
     }
 }
